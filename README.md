@@ -10,6 +10,7 @@ npm install nodemon
 const {app, BrowserWindow, Menu, globalShortcut, ipcMain, remote, dialog}            
                                                               = require('electron')
 ```
+```javascript
 Pakage.json (add this)
 
 "scripts": {
@@ -17,8 +18,10 @@ Pakage.json (add this)
     "start": "electron .",
      "dev": "nodemon --exec electron ."
   }
+```
 
 ## Lesson 2: Main.js
+```javascript
 main.js (add this)
 Create MainWindow
 let mainWindow
@@ -52,9 +55,10 @@ app.on('activate',()=>{
         createMainWindow()
     }
 })
-
+```
 
 ## Lesson 3. Create menu and submenu and global shortcut
+```javascript
 const menu=[
     {label: 'File',submenu:[{label:'Quit',
     submenu:[{label:'exit', accelerator:isMac?'Command+Q':'Ctrl+Q',click:()=>app.quit()}]   }]}
@@ -67,10 +71,10 @@ app.on('ready',()=>{
  globalShortcut.register('CmdOrCtrl+A',()=>{mainWindow.toggleDevTools();console.log('devTool...')})
     mainWindow.on('ready',()=>mainWindow=null)
 })
-
+```
 ## Advanced
 Select or Open images from menu 
-
+```javascript
 const menu = [
 {label:'Image',submenu:[{label:'open',accelerator:'CmdOrCtrl+O'
 ,click:()=>{
@@ -86,9 +90,11 @@ const { ipcRenderer } = require('electron')
 ipcRender.on('image',(event,arg)=>{
 arg//
 })
+```
 
 ## CSS – AdOn
 To create a new element like button or input when we press a button
+```html
 <button onClick = “clickMe()”>Click</button>
 <input id=”in”>
 <div id=”add”></div>
@@ -109,5 +115,8 @@ div1.removeChild(but)
 div1.removeChild(para)
 })
 }
-
+```
+```
+<---Todo's--->
 screen.width vs window.innerWidth
+```
