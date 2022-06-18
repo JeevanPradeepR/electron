@@ -94,7 +94,7 @@ arg//
 
 ## CSS – AdOn
 To create a new element like button or input when we press a button
-```html
+```javascript
 <button onClick = “clickMe()”>Click</button>
 <input id=”in”>
 <div id=”add”></div>
