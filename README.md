@@ -3,7 +3,7 @@
 
 ## Lesson 1: Install electron
 ```javascript
-node init 
+npm init 
 npm install electron --save-dev 
 npm install nodemon
 
